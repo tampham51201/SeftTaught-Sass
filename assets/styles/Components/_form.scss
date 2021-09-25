@@ -1,0 +1,85 @@
+            .form {
+                width: 40%;
+                padding: 8rem 6rem;
+                position: absolute;
+                @include respond(tab-phone) {
+                    width: 80%;
+                    padding: 4rem 0 4rem 4rem;
+                }
+                &-group {
+                    margin: 32px 0;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    &-name {
+                        font-size: 1.2rem;
+                        position: absolute;
+                        bottom: -20px;
+                        left: 18px;
+                        transition: all linear 0.3s;
+                    }
+                }
+                &-control {
+                    flex: 1;
+                    outline: none;
+                    height: 46px;
+                    border-radius: 2px;
+                    border: none;
+                    padding: 0 18px;
+                    border-bottom: 2px solid transparent;
+                    transition: all linear 0.3s;
+                    &:focus {
+                        border-bottom: 2px solid $color-dark;
+                        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+                        transition: all linear 0.3s;
+                        &:invalid {
+                            border-bottom: 2px solid orangered;
+                        }
+                    }
+                }
+                &-control:placeholder-shown+&-group-name {
+                    opacity: 0;
+                    visibility: hidden;
+                    transform: translateY(-3rem);
+                    transition: all linear 0.3s;
+                }
+                &__radio {
+                    &-group {
+                        margin: 14px 0;
+                        width: 45%;
+                        display: flex;
+                    }
+                    &-input {
+                        display: none;
+                    }
+                    &-input:checked~&-label &-btn::after {
+                        opacity: 1;
+                    }
+                    &-label {
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+                    }
+                    &-btn {
+                        height: 28px;
+                        width: 28px;
+                        border: 5px solid $color-medium;
+                        border-radius: 50%;
+                        display: inline-block;
+                        margin-right: 10px;
+                        position: relative;
+                        &::after {
+                            content: "";
+                            opacity: 0;
+                            height: 10px;
+                            width: 10px;
+                            background-color: $color-medium;
+                            border-radius: 50%;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                }
+            }

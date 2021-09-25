@@ -1,0 +1,14 @@
+.u-center-text {
+    text-align: center !important;
+}
+
+.u-margin-bottom-big {
+    margin-bottom: 8rem !important;
+    @include respond(tab-phone) {
+        margin-bottom: 4rem !important;
+    }
+}
+
+.u-margin-bottom-small {
+    margin-bottom: 1.4rem !important;
+}

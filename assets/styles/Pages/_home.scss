@@ -1,0 +1,114 @@
+    .about {
+        background-color: $color-grey-light-1;
+        margin-top: -30rem;
+        padding: 30rem 0;
+        @include respond(tab-phone) {
+            padding: 35rem 2rem 100rem 2rem;
+        }
+        @include respond(tab) {
+            margin-top: -35rem;
+        }
+        @include respond(phone) {
+            margin-top: -48rem;
+        }
+    }
+    
+    .skills {
+        padding: 20rem 0;
+        margin-top: -20rem;
+        background-image: linear-gradient(to right bottom, rgba($color-light, .8), rgba($color-dark, .8)), url('../img/background2.jpg');
+        background-size: cover;
+        background-position: top;
+        clip-path: ellipse(70% 50% at 50% 50%);
+        position: relative;
+        z-index: 2;
+        @include respond(tab-phone) {
+            padding: 14rem 2rem 10rem 2rem;
+            margin-top: -91rem;
+            clip-path: ellipse(88% 46% at 50% 50%);
+        }
+    }
+    
+    .courses {
+        background-color: $color-grey-light-1;
+        margin-top: -18rem;
+        padding: 25rem 0;
+        position: relative;
+        z-index: 1;
+        @include respond(tab-phone) {
+            padding: 25rem 2rem 15rem 2rem;
+        }
+        &__btn {
+            bottom: 12rem;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            @include respond(tab-phone) {
+                bottom: 9rem;
+            }
+        }
+    }
+    
+    .testimonials {
+        padding: 8rem 0 16rem;
+        position: relative;
+        @include respond(tab-phone) {
+            padding: 0 2rem 8rem;
+        }
+        .bg-video {
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            z-index: -1;
+            opacity: .2;
+            overflow: hidden;
+        }
+        .testimonial-btn {
+            margin-top: 8rem;
+            display: flex;
+            width: auto;
+            justify-content: center;
+            @include respond(tab-phone) {
+                margin-top: 3rem;
+            }
+        }
+        .row {
+            @include respond(tab) {
+                margin-left: -100px;
+                margin-right: -100px;
+            }
+        }
+    }
+    
+    .enroll {
+        padding: 10rem 0;
+        position: relative;
+        background-image: linear-gradient(to right bottom, #8e9efc, #1c3eff);
+        height: 600px;
+        @include respond(tab-phone) {
+            padding: 10rem 3rem;
+        }
+        &__form {
+            position: absolute;
+            background-image: radial-gradient(150% 200% ellipse at -35%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 65%, transparent 35%), url(../img/background3.jpg);
+            background-size: cover;
+            height: 500px;
+            border-radius: 70px;
+            width: 80%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+            @include respond(tab-phone) {
+                background-image: radial-gradient(250% 200% ellipse at -35%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 65%, transparent 35%), url(../img/background3.jpg);
+                border-radius: 40px;
+                width: 50%;
+                height: 460px;
+            }
+            @include respond(phone) {
+                width: 94%;
+            }
+        }
+    }

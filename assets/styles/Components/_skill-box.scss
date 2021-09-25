@@ -1,0 +1,27 @@
+.skill-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 60px;
+    transition: all linear 0.2s;
+    cursor: pointer;
+    box-shadow: 0 3px 24px rgba(0, 0, 0, 0.2);
+    @include respond(tab-phone) {
+        margin-bottom: 5rem;
+        padding: 20px;
+    }
+    &__icon {
+        font-size: 5.6rem;
+        background-image: linear-gradient(to right bottom, rgba( $color-light, .4), $color-dark);
+        color: transparent;
+        -webkit-background-clip: text;
+    }
+    &__text {
+        font-size: 1.6rem;
+        padding-bottom: 10px;
+        line-height: 2.4rem;
+    }
+    &:hover {
+        transform: scale(1.015) translateY(-18px);
+    }
+}

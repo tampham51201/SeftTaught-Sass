@@ -1,0 +1,89 @@
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #777;
+    overflow-X: hidden;
+    padding: 30px;
+    @include respond(tab-phone) {
+        padding: 0;
+    }
+}
+
+.header__heading-primary {
+    margin-bottom: 70px;
+    &-main {
+        letter-spacing: 1.4rem;
+        font-weight: 500;
+        font-size: 6rem;
+        text-transform: uppercase;
+        animation: slideRight linear 2s;
+        @include respond(tab) {
+            letter-spacing: 1.2rem;
+            font-weight: 500;
+            font-size: 4.8rem;
+        }
+        @include respond(phone) {
+            letter-spacing: 0.8rem;
+            font-weight: 500;
+            font-size: 4rem;
+        }
+    }
+    &-sub {
+        display: block;
+        letter-spacing: 1.8rem;
+        font-weight: 600;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        animation: slideLeft linear 2s;
+        @include respond(tab) {
+            letter-spacing: 1.2rem;
+            font-weight: 500;
+            font-size: 1.8rem;
+        }
+        @include respond(phone) {
+            letter-spacing: 0.5rem;
+            font-weight: 500;
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.heading-secondary {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    line-height: 4rem;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    background-image: linear-gradient(to right, rgba($color-light, 0.8), $color-dark);
+    color: transparent;
+    -webkit-background-clip: text;
+    transition: all linear 0.2s;
+    &:hover {
+        transform: skewY(5deg) scale(1.1);
+        text-shadow: 0 5px 30px rgba($color-black, .2)
+    }
+    @include respond(tab-phone) {
+        font-size: 2.6rem;
+    }
+}
+
+.heading-tertiary {
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: 1.6rem;
+    line-height: 3rem;
+    font-weight: 500;
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}

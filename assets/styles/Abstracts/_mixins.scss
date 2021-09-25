@@ -1,0 +1,26 @@
+@mixin opsCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin respond($breakpoint) {
+    @if($breakpoint==tab-phone) {
+        @media (max-width: 1023px) {
+            @content
+        }
+        ;
+    }
+    @if($breakpoint==tab) {
+        @media (max-width: 1023px) and (min-width: 740px) {
+            @content
+        }
+        ;
+    }
+    @if($breakpoint==phone) {
+        @media (max-width: 739px) {
+            @content;
+        }
+    }
+}

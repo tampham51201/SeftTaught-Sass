@@ -1,0 +1,64 @@
+.footer {
+    color: $color-white;
+    background-color: #333333;
+    padding: 12rem 0;
+    @include respond(tab-phone) {
+        padding: 6rem 2rem;
+    }
+    &-logo {
+        margin-bottom: 10px;
+        &-img {
+            width: 200px;
+        }
+    }
+    &-heading {
+        color: $color-medium;
+    }
+    &-container {
+        justify-content: space-between;
+    }
+    &__navigation {
+        padding-top: 2rem;
+        border-top: 1px solid $color-white;
+        @include respond(tab-phone) {
+            margin-bottom: 6rem;
+        }
+        &-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            text-transform: uppercase;
+            justify-content: space-around;
+        }
+    }
+    &-link {
+        &:link,
+        &:visited {
+            font-size: 1.4rem;
+            text-decoration: none;
+            color: $color-white;
+            display: inline-block;
+            transition: all linear .3s;
+        }
+        &:hover {
+            transition: all linear .3s;
+            border-radius: 10px;
+            color: $color-medium;
+            background-color: #333333;
+            box-shadow: 0 4px 10px black;
+            transform: skewY(5deg) scale(1.1);
+        }
+    }
+    &__copyright {
+        padding-top: 2rem;
+        border-top: 1px solid $color-white;
+        @include respond(tab-phone) {
+            text-align: center
+        }
+        &-text {
+            font-size: 1.4rem;
+            line-height: 2.2rem;
+        }
+    }
+}
